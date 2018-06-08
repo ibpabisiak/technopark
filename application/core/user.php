@@ -66,4 +66,8 @@ class User {
 	public function GetGroupID() {
 		return $this->group_id;
 	}
+	
+	public function GetHeight() {
+		return $this->height;
+	}
 }

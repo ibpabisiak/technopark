@@ -8,6 +8,7 @@ class Body extends Controller {
 		
 		$body_list = $model->load_body_list();
 		$body_chart = $model->load_body_list_into_chart();
+		$bmi = $model->compute_bmi();
 		
 		require 'application/views/_common/header.tpl.php';
         require 'application/views/body.tpl.php';

@@ -6,6 +6,7 @@
 		<div class="container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					
 					<h1>Twoje pomiary ciała</h1>
 					<div class="table-responsive">
 						<table class="table table-striped table-sm">
@@ -35,7 +36,12 @@
 						<canvas id="myChart"></canvas>
 					</div>
 
-			
+
+				
+					<h3>Twoje BMI wynosi: <?php echo $bmi ?></h3>
+					<label>Obliczone na podstawie ostatniego pomiaru ciała.</label>
+					<img src="https://www.bmi-kalkulator.pl/bmi_grafiki/tabela_bmi.png" />
+					<br /><Br />			
 					
 					<form class="form-signin" method="POST" action="index.php?module=body&page=add_body">
 					  <h1 class="h3 mb-3 font-weight-normal">Dodaj nowy pomiar ciała</h1>

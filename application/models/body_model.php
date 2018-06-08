@@ -156,6 +156,20 @@ class BodyModel {
 		return $result;
 	}
 	
-	
+	public function compute_bmi() {
+		$user_id = Functions::GetUserSession()->GetUniqueID();
+		$query = "SELECT * FROM `body_measurements` WHERE `user_id` = '".$user_id."'";
+		$dbh = $this->db->query($query);
+		
+		$height = Functions::GetUserSession()->GetHeight();
+		$weight = -1;
+
+		while($row = $dbh->fetch(PDO::FETCH_ASSOC)) {
+			$weight = $row['waga'];
+		}
+		
+		
+		return round($weight / ( ($height/100)*($height/100) ), 2);
+	}
 	
 }
