@@ -8,7 +8,9 @@ class TrainingPlanModel {
 	}
 	
 	public function add_plan($title) {
-		$query = "INSERT INTO `training_plans`(`title`) VALUES ('".$title."')";
+		
+		$user_id = Functions::GetUserSession()->GetUniqueID();
+		$query = "INSERT INTO `training_plans`(`user_id`, `title`) VALUES ('".$user_id."', '".$title."')";
 		
 		$this->db->query($query);
 		
@@ -16,7 +18,8 @@ class TrainingPlanModel {
 	
 	public function LoadTrainingPlans() {
 		
-		$query = "SELECT * FROM `training_plans` WHERE 1";
+		$user_id = Functions::GetUserSession()->GetUniqueID();
+		$query = "SELECT * FROM `training_plans` WHERE `user_id` = '".$user_id."'";
 		$dbh = $this->db->query($query);
 		
 		$result = "<ul>";

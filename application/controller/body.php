@@ -7,6 +7,7 @@ class Body extends Controller {
 		$model = $this->loadModuleModel('body_model');
 		
 		$body_list = $model->load_body_list();
+		$body_chart = $model->load_body_list_into_chart();
 		
 		require 'application/views/_common/header.tpl.php';
         require 'application/views/body.tpl.php';

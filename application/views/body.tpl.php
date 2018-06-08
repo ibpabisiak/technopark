@@ -30,6 +30,12 @@
 							</tbody>
 						</table>
 					</div>
+
+					<div>
+						<canvas id="myChart"></canvas>
+					</div>
+
+			
 					
 					<form class="form-signin" method="POST" action="index.php?module=body&page=add_body">
 					  <h1 class="h3 mb-3 font-weight-normal">Dodaj nowy pomiar ciała</h1>
@@ -52,3 +58,11 @@
 			</div>
 		</div>
 	</div>
+	
+	
+					<!-- Graphs -->
+					<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+	
+	
+					<?php echo $body_chart; ?>
+	

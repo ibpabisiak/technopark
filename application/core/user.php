@@ -9,17 +9,26 @@ class User {
 	private $group_title;
 	private $permissions;
 	private $is_logged;
-	
+	private $height;
 	
 	public function __construct($user_data) {
 		$this->is_logged = true;
 		$this->name = $user_data['name'];
+		$this->surname = $user_data['surname'];
 		$this->password = $user_data['password'];
 		$this->email = $user_data['email'];
 		$this->uid = $user_data['id'];
 		$this->group_id = $user_data['group_id'];
 		$this->group_title = $user_data['title'];
 		$this->permissions = new Permissions($user_data['permissions']);
+		$this->height = $user_data['height'];
+		
+		/* debug code
+		print_r(implode(", ", $user_data)."<br />");
+		echo $this->name."<br />".$this->surname."<br />".$user_data['id']."<br />";
+		exit(1);
+		*/
+		
 	}
 	
 	public function IsEntitledToRead($module) {
@@ -58,7 +67,3 @@ class User {
 		return $this->group_id;
 	}
 }
-
-
-
-

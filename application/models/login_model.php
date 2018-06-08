@@ -12,7 +12,7 @@ class LoginModel {
 		$result = false;
 		if(!empty($user_email) && !empty($user_password) && null == $_SESSION[USER_SESSION]) {
 			$query = "	SELECT * FROM users 
-						JOIN groups ON users.group_id = groups.id 
+						JOIN groups ON users.group_id = groups.group_id 
 						WHERE users.email = '".$user_email."' AND users.password = '".hash(PASSWORDS_HASH, $user_password)."' LIMIT 1";
 						
 			$dbh = $this->db->prepare($query);

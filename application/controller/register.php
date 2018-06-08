@@ -13,7 +13,7 @@ class Register extends Controller {
 	public function register_submit() {
 		$login_model = $this->loadModuleModel('register_model');
 		
-		$login_model->register($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password']);
+		$login_model->register($_POST['name'], $_POST['surname'], $_POST['email'], $_POST['password'], $_POST['height']);
 		header("Location: index.php");
 
 	}

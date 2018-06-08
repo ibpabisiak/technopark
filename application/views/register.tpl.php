@@ -11,6 +11,8 @@
 					  <input name="name" type="text" class="form-control" placeholder="Imię.." required autofocus>
 					  <label for="inputEmail" class="sr-only">Nazwisko</label>
 					  <input name="surname" type="text" class="form-control" placeholder="Nazwisko.." required autofocus>
+					  <label for="inputEmail" class="sr-only">Wzrost</label>
+					  <input name="height" type="number" class="form-control" placeholder="Twój wzrost w cm.." required autofocus>
 					  <label for="inputEmail" class="sr-only">Email</label>
 					  <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email.." required autofocus>
 					  <label for="inputPassword" class="sr-only">Hasło</label>
